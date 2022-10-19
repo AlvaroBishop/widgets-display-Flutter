@@ -14,7 +14,6 @@ class ListView1Screen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Listview Tipo 1'),
-        centerTitle: true,
       ),
       body: ListView(
         // Lista de Widgets
