@@ -34,6 +34,7 @@ class CustomCardType2 extends StatelessWidget {
               padding: EdgeInsets.only( right:  20, top: 10,  bottom: 10),
               child: Text(name!),
             )
+           
         ],
       ),
     );

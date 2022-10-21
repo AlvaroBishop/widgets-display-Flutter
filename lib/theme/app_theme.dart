@@ -16,8 +16,14 @@ class AppTheme {
           elevation: 0,
         ),
 
+        // TextButton Theme
         textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: primary)),
 
+
+        // FloatingActionsButtons
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: primary
+        )
 
       );
 }
