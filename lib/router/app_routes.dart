@@ -13,6 +13,7 @@ class AppRoutes {
     MenuOptions(route: 'alert', name: 'Alertas', screen: const AlertScreen(), icon: Icons.add_alert_rounded),
     MenuOptions(route: 'card', name: 'Tarjetas', screen: const CardScreen(), icon: Icons.credit_card_rounded),
     MenuOptions(route: 'avatar', name: 'Circle Avatar', screen: const AvatarScreen(), icon: Icons.supervised_user_circle_outlined),
+    MenuOptions(route: 'animated', name: 'Animated Container', screen: const AnimatedScreen(), icon: Icons.play_circle_outlined),
 
   ];
 
