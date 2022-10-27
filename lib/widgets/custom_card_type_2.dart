@@ -17,10 +17,7 @@ class CustomCardType2 extends StatelessWidget {
       child: Column(
         children: [
           FadeInImage(
-            image: NetworkImage(
-              imageUrl,
-              
-            ),
+            image: NetworkImage(imageUrl),
             placeholder: AssetImage('assets/jar-loading.gif'),
             width: double.infinity, // toma todo el ancho posible
             height: 230,

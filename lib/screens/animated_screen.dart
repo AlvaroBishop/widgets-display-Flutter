@@ -17,21 +17,44 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
 
   void changeShape() {
-    _width = Random().nextDouble() * (100-1) + 1;
-    _height = Random().nextDouble() * (100-1) + 1;
-    _color = Colors.primaries[Random().nextInt(Colors.primaries.length)];
-    _borderRadius = const BorderRadius.horizontal(left: Radius.circular(20), right: Radius.circular(10));
+    double left = Random().nextInt(300).toDouble() + 70; // le sumamos
+    double right = Random().nextInt(300).toDouble() + 70;
+    _width = Random().nextInt(300).toDouble() + 70;
+    _height = Random().nextInt(300).toDouble() + 70;
+    _color = Color.fromRGBO(
+      Random().nextInt(255), 
+      Random().nextInt(255), 
+      Random().nextInt(255), 
+      1
+    );
+    _borderRadius =  randomShape(left, right, Random().nextInt(4));
 
     setState(() {
       
     });
   }
+
+  BorderRadius randomShape(double l, double r, int n)
+  {
+    print(n);
+    switch (n) {
+      case 0: return BorderRadius.horizontal(left: Radius.circular(l), right: Radius.circular(r));
+      case 1: return BorderRadius.circular(l);
+      case 2: return BorderRadius.all(Radius.elliptical(l, r));
+      case 3: return BorderRadius.vertical(top: Radius.circular(l), bottom: Radius.circular(r));
+
+        default: return BorderRadius.circular(10);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Animated Container')),
       body: Center(
-         child: Container(
+         child: AnimatedContainer(
+          duration: const Duration( milliseconds:  400),
+          curve: Curves.easeOutCubic,
           width: _width,
           height: _height,
           decoration: BoxDecoration(
