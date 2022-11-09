@@ -28,6 +28,7 @@ class InputsScreen extends StatelessWidget {
               labelText: 'Nombre',
               helperText: 'Nombre del usuario',
               hintText: 'hint text',
+              
               counterText: 'counter text',
               icon: Icons.person,
               prefixIcon: Icons.perm_contact_cal_rounded,
