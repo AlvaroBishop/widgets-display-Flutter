@@ -11,24 +11,24 @@ class CustomCardType2 extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias, // corta lo que se salga del contenedor
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      margin: EdgeInsets.only(top: 20, right: 5, left: 5),
+      margin: const EdgeInsets.only(top: 20, right: 5, left: 5),
       elevation: 10,
       shadowColor: AppTheme.primary.withOpacity(.4),
       child: Column(
         children: [
           FadeInImage(
             image: NetworkImage(imageUrl),
-            placeholder: AssetImage('assets/jar-loading.gif'),
+            placeholder: const AssetImage('assets/jar-loading.gif'),
             width: double.infinity, // toma todo el ancho posible
             height: 230,
             fit: BoxFit.cover, // la imagen se ajusta al tamaño asignado
-            fadeInDuration: Duration(milliseconds: 300),
+            fadeInDuration: const Duration(milliseconds: 300),
           ),
 
           if(name != null) 
             Container(
               alignment: AlignmentDirectional.centerEnd,
-              padding: EdgeInsets.only( right:  20, top: 10,  bottom: 10),
+              padding: const EdgeInsets.only( right:  20, top: 10,  bottom: 10),
               child: Text(name!),
             )
            
